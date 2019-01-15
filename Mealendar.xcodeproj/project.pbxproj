@@ -14,6 +14,8 @@
 		63EC756D21EDB0BC00406876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EC756B21EDB0BC00406876 /* LaunchScreen.storyboard */; };
 		63EC757821EDB0BD00406876 /* MealendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC757721EDB0BD00406876 /* MealendarTests.swift */; };
 		63EC758321EDB0BD00406876 /* MealendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC758221EDB0BD00406876 /* MealendarUITests.swift */; };
+		63EC759121EDB21C00406876 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC759021EDB21C00406876 /* DateManager.swift */; };
+		63EC759321EDB26900406876 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC759221EDB26900406876 /* CalendarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		63EC757E21EDB0BD00406876 /* MealendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EC758221EDB0BD00406876 /* MealendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealendarUITests.swift; sourceTree = "<group>"; };
 		63EC758421EDB0BD00406876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63EC759021EDB21C00406876 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		63EC759221EDB26900406876 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				63EC756921EDB0BC00406876 /* Assets.xcassets */,
 				63EC756B21EDB0BC00406876 /* LaunchScreen.storyboard */,
 				63EC756E21EDB0BC00406876 /* Info.plist */,
+				63EC759021EDB21C00406876 /* DateManager.swift */,
+				63EC759221EDB26900406876 /* CalendarCell.swift */,
 			);
 			path = Mealendar;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63EC756521EDB0B200406876 /* ViewController.swift in Sources */,
+				63EC759121EDB21C00406876 /* DateManager.swift in Sources */,
 				63EC756321EDB0B200406876 /* AppDelegate.swift in Sources */,
+				63EC759321EDB26900406876 /* CalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
