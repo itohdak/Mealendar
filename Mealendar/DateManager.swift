@@ -38,7 +38,6 @@ class DateManager: NSObject {
             
             let date = NSCalendar(identifier: .gregorian)?.date(byAdding: dateComponents, to: firstDateOfMonth(), options: NSCalendar.Options(rawValue: 0))!
             
-            NSLog("hoge")
             currentMonthOfDates.append(date!)
         }
     }

@@ -67,7 +67,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // 3
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CalendarCell
-        NSLog("hoge3")
         
         if (indexPath.row % 7 == 0 ) {
             cell.textLabel.textColor = UIColor.lightRed()
@@ -87,7 +86,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        NSLog("hoge4")
         let numberOfMargin: CGFloat = 8.0
         let width: CGFloat = (collectionView.frame.size.width - cellMargin * numberOfMargin) / CGFloat(daysPerWeek)
         let height: CGFloat = width * 1.0
@@ -95,12 +93,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        NSLog("hoge5")
         return cellMargin
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        NSLog("hoge6")
         return cellMargin
     }
     
