@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63745A4F21F32C0E0038190E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63745A4E21F32C0E0038190E /* ImageViewController.swift */; };
 		63EC756321EDB0B200406876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC756221EDB0B200406876 /* AppDelegate.swift */; };
 		63EC756521EDB0B200406876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC756421EDB0B200406876 /* ViewController.swift */; };
 		63EC756821EDB0B200406876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EC756621EDB0B200406876 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63745A4E21F32C0E0038190E /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		63EC755F21EDB0B200406876 /* Mealendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EC756221EDB0B200406876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63EC756421EDB0B200406876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				63EC756221EDB0B200406876 /* AppDelegate.swift */,
 				63EC756421EDB0B200406876 /* ViewController.swift */,
+				63745A4E21F32C0E0038190E /* ImageViewController.swift */,
 				63EC756621EDB0B200406876 /* Main.storyboard */,
 				63EC756921EDB0BC00406876 /* Assets.xcassets */,
 				63EC756B21EDB0BC00406876 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				63EC756521EDB0B200406876 /* ViewController.swift in Sources */,
 				63EC759121EDB21C00406876 /* DateManager.swift in Sources */,
+				63745A4F21F32C0E0038190E /* ImageViewController.swift in Sources */,
 				63EC756321EDB0B200406876 /* AppDelegate.swift in Sources */,
 				63EC759321EDB26900406876 /* CalendarCell.swift in Sources */,
 			);

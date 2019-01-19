@@ -86,6 +86,22 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umm-Kq-EoZ" userLabel="Next Button Segue">
+                                <rect key="frame" x="301" y="617" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Segue"/>
+                                <connections>
+                                    <action selector="goNextBySegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nd5-a3-HY5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-VP-VTN">
+                                <rect key="frame" x="299" y="579" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WCx-gl-0bK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -105,11 +121,64 @@
                         <outlet property="headerNextBtn" destination="T8F-31-rDe" id="MzP-K9-Vyn"/>
                         <outlet property="headerPrevBtn" destination="EOg-bp-GW9" id="E01-MV-xOw"/>
                         <outlet property="headerTitle" destination="bPx-Wu-J9e" id="lJr-gH-2pQ"/>
+                        <outlet property="nextButton" destination="tdL-VP-VTN" id="n9J-Mf-ZYH"/>
+                        <segue destination="egO-Rb-gFX" kind="presentation" identifier="nextSegue" id="wDI-ib-zgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="130.88455772113943"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="hnp-dN-D6Y">
+            <objects>
+                <viewController storyboardIdentifier="nextView" id="egO-Rb-gFX" customClass="ImageViewController" customModule="Mealendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UC8-7k-1jl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lSo-cX-x7n">
+                                <rect key="frame" x="32" y="178" width="311" height="311"/>
+                                <color key="backgroundColor" red="0.91841139709999997" green="1" blue="0.71507878199999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lSo-cX-x7n" secondAttribute="height" multiplier="1:1" id="OUm-GY-wWu"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qg9-kt-7Q4" appends="YES" id="01T-iX-adB"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6d-XQ-LqV" userLabel=" Back Button">
+                                <rect key="frame" x="170" y="71" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="YyV-9x-QbJ" kind="unwind" unwindAction="goBack:" id="8PP-9s-ejv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lSo-cX-x7n" firstAttribute="centerY" secondItem="UC8-7k-1jl" secondAttribute="centerY" id="KkA-zX-REL"/>
+                            <constraint firstItem="lSo-cX-x7n" firstAttribute="centerX" secondItem="UC8-7k-1jl" secondAttribute="centerX" id="LD8-Xc-iX1"/>
+                            <constraint firstItem="MRY-gR-Nb2" firstAttribute="trailing" secondItem="lSo-cX-x7n" secondAttribute="trailing" constant="32" id="M2F-80-g6g"/>
+                            <constraint firstItem="lSo-cX-x7n" firstAttribute="leading" secondItem="MRY-gR-Nb2" secondAttribute="leading" constant="32" id="ldU-IA-pGF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MRY-gR-Nb2"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="lSo-cX-x7n" id="xcH-pO-GrI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2A7-eg-Hpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YyV-9x-QbJ" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Qg9-kt-7Q4">
+                    <connections>
+                        <action selector="selectImage:" destination="egO-Rb-gFX" id="VM4-lp-HvL"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="817" y="133"/>
         </scene>
     </scenes>
 </document>
