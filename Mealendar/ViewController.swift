@@ -6,7 +6,7 @@
 //  Copyright © 2019 Hideaki Ito. All rights reserved.
 //
 // Referred to https://qiita.com/sakuran/items/3c2c9f22cbcbf4aff731
-
+//
 
 import UIKit
 
@@ -34,6 +34,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var calendarHeaderView: UIView!
     @IBOutlet weak var calendarCollectionView: UICollectionView!
+    
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,5 +120,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         calendarCollectionView.reloadData()
         headerTitle.text = changeHeaderTitle(date: selectedDate)
     }
+    
+    @IBAction func goBack(_ segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func goNext(_ sender: UIButton) {
+        let next = storyboard!.instantiateViewController(withIdentifier: "nextView")
+        self.present(next, animated: true, completion: nil)
+    }
+    
+    @IBAction func goNextBySegue(_ sender: UIButton) {
+        performSegue(withIdentifier: "nextSegue", sender: nil)
+    }
 }
-
